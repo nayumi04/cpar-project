@@ -8,100 +8,107 @@
 	<title>Project</title>
 	<style type="text/css">
 
-body{
-		background-image: url(bg1.jpg);
-		background-size: cover;
-		background-attachment: fixed;
-		scroll-behavior: smooth;
-	    background-attachment: scroll;
-		justify-content: center;
-    		align-items: center;
-		background-position: center;
-  		  background-repeat: no-repeat;
-	    min-height: 100vh;
+/* General Styles */
+body {
+    background-image: url(bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
     width: 100%;
-	    height: auto;
-
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
+/* Responsive Background Fix for Mobile */
+@media (max-width: 1024px) {
     body {
-        background-size: cover; /* Ensure full coverage */
-        background-attachment: scroll; /* Fix for mobile scrolling */
+        background-attachment: scroll;
+        background-size: cover;
     }
 }
-div{
-	padding: 50px;
+
+/* General Div Padding */
+div {
+    padding: 50px;
 }
 
-h1,h4{
-	font-size: 200%;
-	margin-top: 50px;
-	color: black;
+/* Heading Styles */
+h1, h4 {
+    font-size: 200%;
+    margin-top: 50px;
+    color: black;
 }
 
-table{
-  margin: auto;
-		padding: 1px;
-		width: 100%;
-		height: 100%;
-		table-layout: fixed;
-		 border-collapse: collapse;
-        overflow-x: auto;
-	display: block;
-
+/* Table Styling */
+table {
+    margin: auto;
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
 }
-tr,td{
-     border: 1px solid goldenrod;
+
+tr, td {
+    border: 1px solid goldenrod;
     background-color: ghostwhite;
-    border-spacing: 1px ;
-    		padding: 30px;
+    padding: 30px;
+}
 
-
+/* Table Header */
 th {
     padding: 5px !important;
     text-align: center;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #e7b021;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
-nav{
-	background-color: #e7b021;
-	padding: 50px;
-	position: fixed;
-	width: 100%;
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            font-size: 30px; 
-            font-weight: bold; 
-        }
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px; 
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Mobile & Tablet Navbar Adjustments */
+@media (max-width: 1024px) {
+    nav {
+        padding: 10px;
     }
 
-    .navbar-nav {
+    nav ul {
+        flex-direction: column;
         text-align: center;
     }
 
-    .navbar-nav .nav-item {
-        margin-bottom: 10px; 
-    }
-}
-.section-style {
-padding-top: 10%;
-	min-height: 100vh;
-}
+    nav ul li {
+        
 	</style>
 
 </head>
