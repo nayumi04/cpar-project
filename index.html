@@ -19,6 +19,8 @@ body{
   		  background-repeat: no-repeat;
 	    min-height: 100vh;
     width: 100%;
+	    height: auto;
+
 }
 
 div{
@@ -38,6 +40,9 @@ table{
 		height: 100%;
 		table-layout: fixed;
 		 border-collapse: collapse;
+        overflow-x: auto;
+	display: block;
+
 }
 tr,td{
      border: 1px solid goldenrod;
@@ -73,8 +78,21 @@ nav{
             font-size: 30px; 
             font-weight: bold; 
         }
+    .navbar {
+        padding: 10px; 
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; 
+    }
+}
 .section-style {
 padding-top: 10%;
+	min-height: 100vh;
 }
 	</style>
 
